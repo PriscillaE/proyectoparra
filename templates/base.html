@@ -1,0 +1,41 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+	<head>
+		<title>Fundación SEPHER</title>
+		<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+		<script src="{% static 'js/jquery.min.js' %}"></script>
+		<div>
+			<header role="banner">
+				<div class="inner-wrapper">
+				<h1><center><img src="{% static 'img/logosepher.png' %}" width="20%" height="20%"></h1>
+				</div> 
+			</header>
+			<nav class="nav navbar" style="background-color:#F57F20" role="navigation">
+			<center>
+			<div class="inner-wrapper" >
+			<div class="container" >
+				<ul class="nav navbar-nav">
+					<li><a href="" style="color:white">Acerca de</a></li>
+					<li><a href="" style="color:white">Historia</a></li>
+					<li><a href="" style="color:white">Casos éxito</a></li>
+					<li role="presentation" class="dropdown">
+   						<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span>
+    					</a>
+    					<ul class="dropdown-menu">
+      						<li><a href="/registro_paciente/">Registro Pacientes</a></li>
+				            <li><a href="/reporte_pacientes/">Reportes Pacientes</a></li>
+				            <li><a href="//">Something else here</a></li>
+    					</ul>
+  					</li>
+				</ul>
+			</div>
+			</div>
+			</center>
+			</nav>
+		</div>
+		{% block content %}
+		{% endblock %}
+		<script src="{% static 'js/bootstrap.js' %}"></script>
+		
+	</body>
+</html>
